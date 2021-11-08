@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/repo_nav_graph"
+    app:startDestination="@id/RepoFragment">
+
+    <fragment
+        android:id="@+id/RepoFragment"
+        android:name="com.aaascp.repo.presentation.RepoFragment"
+        android:label="@string/title_fragment_repo"
+        tools:layout="@layout/fragment_repo" >
+        <action
+            android:id="@+id/action_RepoFragment_to_RepoDetailsFragment"
+            app:destination="@id/RepoDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/RepoListFragment"
+        android:name="com.aaascp.repo.presentation.RepoListFragment"
+        android:label="@string/title_repo_list"
+        tools:layout="@layout/fragment_repo_list">
+
+        <action
+            android:id="@+id/action_RepoListFragment_to_RepoDetailsFragment"
+            app:destination="@id/RepoDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/RepoDetailFragment"
+        android:name="com.aaascp.repo.presentation.RepoDetailFragment"
+        android:label="@string/title_repo_details"
+        tools:layout="@layout/fragment_repo_details"/>
+</navigation>
