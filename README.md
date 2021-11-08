@@ -18,6 +18,7 @@ Este app oferece uma visualização dos repositórios do `Github` para a linguag
 - Hilt ✅
 - Room database ✅
 - Funciona offline ✅
+- Logs com Timber ✅
 
 ## Preview
 
@@ -27,6 +28,8 @@ Este app oferece uma visualização dos repositórios do `Github` para a linguag
 
 ## Como rodar
 
-Para rodar a aplicação basta fazer o download do app deste link: [APK para download]()
+APK: [APK para download](https://github.com/aaascp/app/files/7499502/app-debug.apk.zip)
+- **Observação:** como esta não é uma aplicação com dados sensíveis, este é o apk de debug. Portanto é possível acompanhar os logs através do `logcat`. 
+
 
 Outra possibilidade é baixar este projeto e rodar no `Android Studio`.
