@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.aaascp.commons">
+
+    <application>
+        <activity
+            android:name=".testutils.HiltTestActivity"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:exported="false" />
+    </application>
+
+</manifest>

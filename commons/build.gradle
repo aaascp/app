@@ -1,0 +1,48 @@
+plugins {
+    id "com.android.library"
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+    defaultConfig {
+        targetSdkVersion rootProject.targetSdkVersion
+        minSdkVersion rootProject.minSdkVersion
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+
+    // Image
+    implementation "io.coil-kt:coil:$coilVersion"
+
+    // Log
+    implementation "com.jakewharton.timber:timber:$timberVersion"
+
+    // Test
+    implementation "androidx.test.espresso:espresso-idling-resource:$espressoVersion"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+
+    // UI
+    implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
+
+    // Network
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    // Dependency Injection
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+
+    // UI Tests
+    implementation "androidx.test.ext:junit:$junitExtVersion"
+    debugImplementation "androidx.fragment:fragment-testing:$fragmentTestingVersion"
+    implementation 'androidx.test:runner:1.4.0'
+    implementation "com.google.dagger:hilt-android-testing:$hiltVersion"
+}
