@@ -1,4 +1,4 @@
-package com.aaascp.github.factories
+package com.aaascp.repo.factories
 
 import com.aaascp.repo.domain.Owner
 import com.aaascp.repo.domain.Repo

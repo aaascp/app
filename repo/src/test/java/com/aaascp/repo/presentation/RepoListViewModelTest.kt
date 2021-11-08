@@ -3,11 +3,10 @@ package com.aaascp.repo.presentation
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.PagingData
-import com.aaascp.github.factories.createRandomRepo
+import com.aaascp.repo.factories.createRandomRepo
 import com.aaascp.repo.usecases.GetAllKotlinReposOrderedByStarsUseCase
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
-import io.mockk.coVerify
 import io.mockk.impl.annotations.MockK
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

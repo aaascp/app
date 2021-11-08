@@ -13,13 +13,13 @@ import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.filters.LargeTest
-import com.aaascp.github.factories.createRandomRepo
 import com.aaascp.commons.testutils.launchFragmentInHiltContainer
 import com.aaascp.repo.R
 import com.aaascp.repo.data.RepoRepository
 import com.aaascp.repo.di.RepositoryModule
 import com.aaascp.repo.di.TestRepoRepository
 import com.aaascp.repo.domain.Repo
+import com.aaascp.repo.factories.createRandomRepo
 import dagger.hilt.android.testing.BindValue
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
