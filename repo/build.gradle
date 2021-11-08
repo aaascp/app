@@ -1,0 +1,90 @@
+plugins {
+    id "com.android.library"
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+    defaultConfig {
+        targetSdkVersion rootProject.targetSdkVersion
+        minSdkVersion rootProject.minSdkVersion
+
+        testInstrumentationRunner "com.aaascp.commons.testutils.CustomTestRunner"
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    sourceSets {
+        String sharedTestDir = 'src/sharedTest/java'
+        test {
+            java.srcDirs += sharedTestDir
+        }
+        androidTest {
+            java.srcDirs += sharedTestDir
+        }
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+
+    // Android
+    implementation "androidx.core:core-ktx:$coreKtxVersion"
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+
+    // UI
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+
+    // Image Loader
+    implementation "io.coil-kt:coil:$coilVersion"
+
+    // Log
+    implementation "com.jakewharton.timber:timber:$timberVersion"
+
+    // UI Test
+    implementation "androidx.test.espresso:espresso-idling-resource:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
+    debugImplementation "androidx.fragment:fragment-testing:$fragmentTestingVersion"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesTestVersion"
+
+    // Test
+    testImplementation "androidx.arch.core:core-testing:$coreTestingVersion"
+    testImplementation "junit:junit:$junit4Version"
+    testImplementation "io.mockk:mockk:$mockkVersion"
+    androidTestImplementation "io.mockk:mockk-android:$mockkVersion"
+    androidTestImplementation "androidx.test.ext:junit:$junitExtVersion"
+
+    // Navigation
+    implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+    androidTestImplementation "androidx.navigation:navigation-testing:$navigationVersion"
+
+    // Network
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+
+    // Dependency Injection
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$hiltVersion"
+    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hiltVersion"
+
+    // Paging
+    implementation "androidx.paging:paging-runtime-ktx:$pagingVersion"
+
+    // Database
+    kapt "androidx.room:room-compiler:$roomVersion"
+    implementation "androidx.room:room-runtime:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
+    implementation "androidx.room:room-paging:$roomPagingVersion"
+
+    // Local dependencies
+    implementation project(':commons')
+}

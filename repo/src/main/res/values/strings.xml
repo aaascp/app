@@ -1,0 +1,12 @@
+<resources>
+    <string name="title_fragment_repo">Repo App</string>
+    <string name="title_repo_list">Repo List</string>
+    <string name="title_repo_details">Repo Details</string>
+
+    <string name="repo_list_more_details_link">Ver detalhes</string>
+    <string name="repo_list_no_results">Nenhum repositório encontrado</string>
+    <string name="repo_list_retry">Tentar novamente</string>
+
+    <string name="repo_details_avatar">Repo author avatar</string>
+    <string name="repo_details_empty">Nenhum item selecionado</string>
+</resources>
