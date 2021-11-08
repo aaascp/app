@@ -35,16 +35,18 @@ private interface LoggerContract {
     fun logError(t: Throwable)
 }
 
+private const val LOGGER_TAG = "Logger"
+
 private class LogLibrary : LoggerContract {
     override fun log(priority: Int, tag: String?, message: String) {
-        TODO("Not yet implemented")
+        Log.d(tag, message)
     }
 
     override fun logWarning(t: Throwable) {
-        TODO("Not yet implemented")
+        Log.d(LOGGER_TAG, t.message ?: t.cause.toString())
     }
 
     override fun logError(t: Throwable) {
-        TODO("Not yet implemented")
+        Log.d(LOGGER_TAG, t.message ?: t.cause.toString())
     }
 }
