@@ -10,7 +10,7 @@ Este app oferece uma visualização dos repositórios do `Github` para a linguag
 - Scroll infinito ✅
 - Testes de unidade ✅
 - Testes de UI usando Espresso ✅
-- Android Architecture Components ✅
+- Android Architecture Components ✅ 
 - Coroutines ✅
 - Cache de imagens e da API ✅
 - Mudanças de orientação das telas sem perder estado ✅
@@ -19,6 +19,9 @@ Este app oferece uma visualização dos repositórios do `Github` para a linguag
 - Room database ✅
 - Funciona offline ✅
 - Logs com Timber ✅
+- Modularização ✅
+- MVVM com LiveData ✅
+- Navigation Component ✅
 
 ## Preview
 
