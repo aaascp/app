@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    style="@style/CardStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/cardAvatar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="@dimen/margin_horizontal_default"
+            android:layout_marginTop="@dimen/margin_vertical_default"
+            android:layout_marginEnd="@dimen/margin_horizontal_default"
+            android:contentDescription="@string/repo_details_avatar"
+            android:maxWidth="150dp"
+            android:maxHeight="150dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/cardStars"
+            style="@style/CardHeaderStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_horizontal_default"
+            android:drawablePadding="@dimen/padding_small"
+            app:drawableLeftCompat="@drawable/ic_star"
+            app:layout_constraintBottom_toTopOf="@id/cardTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="41074" />
+
+        <TextView
+            android:id="@+id/cardTitle"
+            style="@style/CardTitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_horizontal_default"
+            android:layout_marginEnd="@dimen/margin_horizontal_default"
+            app:layout_constraintBottom_toTopOf="@id/cardAuthor"
+            app:layout_constraintEnd_toStartOf="@id/cardAvatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardStars"
+            tools:text="okhttp" />
+
+        <TextView
+            android:id="@+id/cardAuthor"
+            style="@style/CardDescriptionStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_horizontal_default"
+            android:layout_marginEnd="@dimen/margin_horizontal_default"
+            app:layout_constraintBottom_toTopOf="@id/cardLink"
+            app:layout_constraintEnd_toStartOf="@id/cardAvatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardTitle"
+            tools:text="Author name" />
+
+        <TextView
+            android:id="@+id/cardLink"
+            style="@style/CardLinkStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_vertical_default"
+            android:text="@string/repo_list_more_details_link"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardAvatar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
