@@ -1,10 +1,10 @@
 package com.aaascp.repo.di
 
-import com.aaascp.repo.db.RepoDatabase
 import com.aaascp.repo.data.RepoRestService
 import com.aaascp.repo.data.dao.OwnerDao
 import com.aaascp.repo.data.dao.RemoteKeysDao
 import com.aaascp.repo.data.dao.RepoDao
+import com.aaascp.repo.db.RepoDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

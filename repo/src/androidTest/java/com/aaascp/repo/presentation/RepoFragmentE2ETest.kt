@@ -9,8 +9,9 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.isCompletelyDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.filters.LargeTest
-import com.aaascp.commons.testutils.launchFragmentInHiltContainer
+import com.aaascp.commons.R.style.FragmentScenarioEmptyFragmentActivityTheme
 import com.aaascp.commons.testutils.RepoIdleResource
+import com.aaascp.commons.testutils.launchFragmentInHiltContainer
 import com.aaascp.repo.R
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
@@ -45,7 +46,9 @@ class RepoFragmentE2ETest {
 
     @Test
     fun onItemClick_whenOrientationEqualsLandscape_shouldNavigateToItemDetails() {
-        launchFragmentInHiltContainer<RepoFragment>()
+        launchFragmentInHiltContainer<RepoFragment>(
+            themeResId = FragmentScenarioEmptyFragmentActivityTheme
+        )
 
         onView(withId(R.id.repoListRecyclerView))
             .check(matches(isCompletelyDisplayed()))

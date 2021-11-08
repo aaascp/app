@@ -26,7 +26,6 @@ import androidx.core.util.Preconditions
 import androidx.fragment.app.Fragment
 import androidx.test.core.app.ActivityScenario
 import androidx.test.core.app.ApplicationProvider
-import com.aaascp.commons.R
 
 /**
  * launchFragmentInContainer from the androidx.fragment:fragment-testing library
@@ -41,7 +40,7 @@ import com.aaascp.commons.R
 inline fun <reified T : Fragment> launchFragmentInHiltContainer(
     orientation: Int = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT,
     fragmentArgs: Bundle? = null,
-    @StyleRes themeResId: Int = R.style.FragmentScenarioEmptyFragmentActivityTheme,
+    @StyleRes themeResId: Int,
     crossinline action: Fragment.() -> Unit = {}
 ) {
     val startActivityIntent = Intent.makeMainActivity(

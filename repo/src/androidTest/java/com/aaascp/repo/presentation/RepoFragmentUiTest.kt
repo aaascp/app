@@ -13,6 +13,7 @@ import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.filters.LargeTest
+import com.aaascp.commons.R.style.FragmentScenarioEmptyFragmentActivityTheme
 import com.aaascp.commons.testutils.launchFragmentInHiltContainer
 import com.aaascp.repo.R
 import com.aaascp.repo.data.RepoRepository
@@ -116,7 +117,10 @@ class RepoFragmentUiTest {
     }
 
     private fun launchFragment(orientation: Int) {
-        launchFragmentInHiltContainer<RepoFragment>(orientation) {
+        launchFragmentInHiltContainer<RepoFragment>(
+            orientation,
+            themeResId = FragmentScenarioEmptyFragmentActivityTheme
+        ) {
             navController.setGraph(R.navigation.repo_nav_graph)
             Navigation.setViewNavController(requireView(), navController)
         }

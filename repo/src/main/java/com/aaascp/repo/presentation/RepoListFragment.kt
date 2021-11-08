@@ -15,8 +15,8 @@ import androidx.paging.PagingData
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.aaascp.commons.MarginItemDecoration
-import com.aaascp.commons.testutils.RepoIdleResource
 import com.aaascp.commons.getOrientation
+import com.aaascp.commons.testutils.RepoIdleResource
 import com.aaascp.repo.R
 import com.aaascp.repo.databinding.FragmentRepoListBinding
 import com.aaascp.repo.domain.Repo
